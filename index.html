@@ -16,30 +16,47 @@
 </head>
 <body>
 
-
-  <h1>Crystals Collector! </h1>
+ 
+  <h1 id="title-header">Crystals Collector! </h1>
   
   <br>
 
-  <div id="rules"> 
-    <p> You will be given a random number at the start of the game. </p>
-    <p> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. </p>
-    <p> You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number. </p>
-    <p> The value of each crystal is hidden from you until you click on it. </p>
-    <p> Each time when the game starts, the game will change the values of each crystal. </p>
+  
+  <div class="row">
+    <div  class = "col-md-8 head section rulesRow"> 
+      <div id="rules"> 
+        <p> You will be given a random number at the start of the game. </p>
+        <p> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. </p>
+        <p> You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number. </p>
+        <p> The value of each crystal is hidden from you until you click on it. </p>
+        <p> Each time when the game starts, the game will change the values of each crystal. </p>
+      </div>
+    </div>
   </div>
 
-  <div id="buttons">
-        <button id="start">Start/Reset</button>
-        
-  </div>
+
+
+   <div class = "row">
+        <div class = "btn-group-lg buttonRow">
+          
+            <button type="button" id="start" class="btn btn-default">
+                    Start/Reset
+            </button>
+          
+         </div>
+     </div> 
+
+  <br>
 
   <div class="container">
 
+    
+
+    
      <div class = "row">
 
        <div class = "col-md-12 head section">
-          <h1> Stats: </h1>
+          <h1 id="msg-area-hdr"> Stats: </h1> <p id="message-area"> Press a crystal! </p>
 
           <div class = "row content">
 
