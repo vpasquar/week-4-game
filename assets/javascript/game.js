@@ -14,6 +14,7 @@ $("#crystals").on("click",".crystal-image",function(){
 
     var crystalValue = ($(this).attr("data-crystalvalue"));
         crystalValue = parseInt(crystalValue);
+    alert(crystalValue);    
     
     counter += crystalValue;
     
@@ -45,13 +46,13 @@ $("#crystals").on("click",".crystal-image",function(){
          imageCrystal.attr("src",imageLinks[i]);
          // Each imageCrystal will be given a data attribute called data-crystalValue.
          // This data attribute will be set equal to the array value.
-         if (i < 3) {
-            imageCrystal.attr("data-crystalvalue", numberOptions[i]);
-         }
-         else {
-            var randomNum = Math.floor(Math.random() * 10) + 1;
-            imageCrystal.attr("data-crystalvalue",randomNum);
-         }   
+         //if (i < 3) {
+         //   imageCrystal.attr("data-crystalvalue", numberOptions[i]);
+         //}
+         //else {
+         var randomNum = Math.floor(Math.random() * 10) + 1;
+         imageCrystal.attr("data-crystalvalue",randomNum);
+         //}   
          // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
          $("#crystals").append(imageCrystal);
       }
