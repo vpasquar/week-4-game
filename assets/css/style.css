@@ -15,7 +15,7 @@ body,html {
  }
 
  #crystals {
-  margin-left:10.5%;
+  margin-left:5%;
  }
  
 #rules {
@@ -26,9 +26,19 @@ body,html {
 }
 .container {
 
-	background-color:#A52A2A;
+	
 	color:white;
+	width:95%;
+	display:table;
+	table-layout:fixed;
+	
+	border-spacing:10px;
 }
+
+.row { 
+ background-color:#A52A2A;	
+ padding:10px;
+ }
 
 .buttonRow {
 	margin-left:45%;
@@ -50,6 +60,6 @@ body,html {
 }
 
 #title-header {
-
+     position:fixed;
 	background-color: orange;
 }
