@@ -35,6 +35,7 @@ $("#crystals").on("click",".crystal-image",function(){
                        "assets/images/crystal3.jpg","assets/images/crystal4.jpg"]
       // Next we create a for loop to create crystals for every numberOption.
       for (var i = 0; i < numberOptions.length; i++) {
+
          // For each iteration, we will create an imageCrystal
          var imageCrystal = $("<img>");
          // First each crystal will be given the class ".crystal-image".
@@ -44,7 +45,13 @@ $("#crystals").on("click",".crystal-image",function(){
          imageCrystal.attr("src",imageLinks[i]);
          // Each imageCrystal will be given a data attribute called data-crystalValue.
          // This data attribute will be set equal to the array value.
-         imageCrystal.attr("data-crystalvalue", numberOptions[i]);
+         if (i < 3) {
+            imageCrystal.attr("data-crystalvalue", numberOptions[i]);
+         }
+         else {
+            var randomNum = Math.floor(Math.random() * 10) + 1;
+            imageCrystal.attr("data-crystalvalue",randomNum);
+         }   
          // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
          $("#crystals").append(imageCrystal);
       }
@@ -76,7 +83,7 @@ $("#crystals").on("click",".crystal-image",function(){
 
 //prints wins and losses 
   function logRecord(){     
-    
+
       $("#stats").html("wins: " + wins + "  " + "losses: " + losses);  
   }
 
