@@ -25,7 +25,7 @@ $("#crystals").on("click",".crystal-image",function(){
 
   function startUp() {
 
-      targetNumber = Math.floor(Math.random() * 40) + 1;
+      targetNumber = Math.floor(Math.random() * 99) + 1;
       $("#number-to-guess").html("target: " + targetNumber);
       counter = 0;
     
@@ -61,17 +61,19 @@ $("#crystals").on("click",".crystal-image",function(){
   function checkScore() {
 
       if (counter === targetNumber) {
-          $("#message-area").html("You win! Press restart")
+          $("#message-area").html("You win! Crystals Disabled! Press restart")
           winSwitch = true
           wins++
           logRecord();
+          //$("#crystals").off('click');
       }
 
       else if (counter >= targetNumber) {
-          $("#message-area").html("You Lose! Press restart")
+          $("#message-area").html("You Lose! Crystals Disabled! Press restart")
           winSwitch = false
           losses++
           logRecord();
+          //$("#crystals").off('click');
       }
 
       else if (counter < targetNumber) {
